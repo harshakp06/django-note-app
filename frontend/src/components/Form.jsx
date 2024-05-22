@@ -1,6 +1,6 @@
 import { useState } from "react";
 import api from "../api";
-import { Await, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
 import "../styles/Form.css"
 
@@ -34,7 +34,8 @@ function Form() {
     }
 
 
-    return <form onSubmit={handleSubmit} className="form-conatiner">
+    return (
+    <form onSubmit={handleSubmit} className="form-conatiner">
         <h1>{name}</h1>
         <imput 
             className =  "form-input"
@@ -56,6 +57,7 @@ function Form() {
 
 
     </form>
+    );
 }
 
 export default Form
